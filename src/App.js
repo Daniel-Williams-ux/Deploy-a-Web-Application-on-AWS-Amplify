@@ -4,6 +4,8 @@ import { listNotes } from './graphql/queries'
 import { withAuthenticator, Button, Text, Flex, Heading } from "@aws-amplify/ui-react";
 import { useCallback, useEffect, useState } from 'react';
 import { API } from 'aws-amplify';
+import { graphqlOperation } from 'aws-amplify';
+import { getPost } from './graphql/queries';
 
 function App({ signOut }) {
   const [ notes, setNotes ] = useState([])
